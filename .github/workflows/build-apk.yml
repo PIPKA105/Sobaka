@@ -16,6 +16,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Unpack project zip if present
+        run: |
+          if [ ! -f "settings.gradle.kts" ] && [ -f "YouYube-Anonim-Android.zip" ]; then
+            unzip -o YouYube-Anonim-Android.zip
+          fi
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
