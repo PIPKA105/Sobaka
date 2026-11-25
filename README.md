@@ -1,2 +1,0 @@
-# Sobaka
-pok
